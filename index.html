@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>ჩემი უთბილესი გოგოსთვის ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* ✨ Sparkle background */
+
+body::after{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px,transparent 1px);
+background-size:40px 40px;
+opacity:0.2;
+pointer-events:none;
+}
+
+/* ❤️ Title heartbeat */
+
+h1{
+font-size:48px;
+margin-top:20px;
+animation:heartbeat 2s infinite;
+text-shadow:0 0 10px #fff,0 0 20px #ff4da6,0 0 40px #ff1a75;
+}
+
+@keyframes heartbeat{
+0%{transform:scale(1)}
+25%{transform:scale(1.05)}
+40%{transform:scale(1)}
+60%{transform:scale(1.08)}
+100%{transform:scale(1)}
+}
+
+/* 📷 Slider */
+
+.slider{
+width:320px;
+height:400px;
+margin:auto;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.slides{
+display:flex;
+width:2000%;
+animation:slide 60s linear infinite;
+will-change:transform;
+}
+
+.slides img{
+width:320px;
+height:400px;
+object-fit:cover;
+flex-shrink:0;
+}
+
+@keyframes slide{
+0%{transform:translateX(0);}
+100%{transform:translateX(-6080px);}
+}
+
+/* 💎 Glass sections */
+
+.section{
+max-width:700px;
+margin:40px auto;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.section:hover{
+transform:scale(1.03);
+}
+
+/* 💌 Letter */
+
+.letter{
+background:white;
+color:#333;
+padding:25px;
+border-radius:15px;
+cursor:pointer;
+max-height:40px;
+overflow:hidden;
+transition:max-height 1s ease;
+}
+
+.letter.open{
+max-height:600px;
+}
+
+/* 💞 Forever text */
+
+.forever{
+font-size:30px;
+margin-top:30px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+}
+
+/* 💍 Proposal Ring */
+
+.ring{
+font-size:70px;
+margin-top:20px;
+cursor:pointer;
+display:inline-block;
+animation:ringFloat 3s infinite ease-in-out;
+}
+
+@keyframes ringFloat{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+.ring.open{
+animation:ringSpin 1s forwards;
+}
+
+@keyframes ringSpin{
+0%{transform:scale(1) rotate(0)}
+50%{transform:scale(1.5) rotate(180deg)}
+100%{transform:scale(1.2) rotate(360deg)}
+}
+
+/* 🌹 Roses */
+
+.rose{
+position:fixed;
+top:-50px;
+font-size:24px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+/* ❤️ Hearts */
+
+.heart{
+position:fixed;
+width:20px;
+height:20px;
+background:red;
+transform:rotate(45deg);
+animation:float 8s infinite;
+}
+
+.heart:before,
+.heart:after{
+content:"";
+position:absolute;
+width:20px;
+height:20px;
+background:red;
+border-radius:50%;
+}
+
+.heart:before{top:-10px;}
+.heart:after{left:-10px;}
+
+@keyframes float{
+0%{transform:translateY(0) rotate(45deg);opacity:1}
+100%{transform:translateY(-900px) rotate(45deg);opacity:0}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>ჩემს მერლინს ❤️</h1>
+
+<audio id="music" autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("click", function(){
+const music = document.getElementById("music");
+music.play();
+});
+</script>
+
+<!-- 📷 Photo slider -->
+
+<div class="slider">
+<div class="slides">
+
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+<img src="5.jpg">
+<img src="6.jpg">
+<img src="7.jpg">
+<img src="8.jpg">
+<img src="9.jpg">
+<img src="10.jpg">
+<img src="11.jpg">
+<img src="12.jpg">
+<img src="13.jpg">
+<img src="14.jpg">
+<img src="15.jpg">
+<img src="16.jpg">
+<img src="17.jpg">
+<img src="18.jpg">
+<img src="19.jpg">
+<img src="20.jpg">
+
+</div>
+</div>
+
+<!-- 💞 Forever -->
+
+<div class="forever">
+Will you be mine forever? ❤️
+</div>
+
+<!-- 💍 Proposal ring -->
+
+<div class="ring" onclick="openRing(this)">
+💍
+</div>
+
+<!-- 💌 Love letter -->
+
+<div class="section">
+<div class="letter" onclick="this.classList.toggle('open')">
+
+<strong>დააჭირე აქ წერილის გასახსნელად 💌</strong>
+
+<p>
+ჩემო სიყვარულო<br><br>
+
+შენ ხარ ის ადამიანი, რომელმაც ჩემი ცხოვრება უფრო ლამაზი გახადა.
+როცა შენთან ვარ დრო თითქოს ჩერდება და ყველაფერი იდეალური ხდება.
+შენი ღიმილი ჩემი დღის ყველაზე ნათელი ნაწილია.<br><br>
+
+არ ვიცი როგორ მოვხვდი ასეთ ბედნიერებაში,
+მაგრამ ერთი რამ ზუსტად ვიცი — მინდა მთელი ცხოვრება შენთან ერთად გავატარო.<br><br>
+
+მიყვარხარ დღეს, მიყვარხარ ხვალ და მიყვარხარ სამუდამოდ ❤️
+</p>
+
+</div>
+</div>
+
+<!-- ❤️ Love text -->
+
+<div class="section">
+<h2>❤️</h2>
+
+<p>შენ ხარ ჩემი ბედნიერება.</p>
+<p>შენ ხარ ჩემი სიმშვიდე.</p>
+<p>შენ ხარ ჩემი ყველაზე დიდი ოცნება.</p>
+
+<p>როცა შენთან ვარ, ყველაფერი უკეთესია.</p>
+<p>როცა შენ ბედნიერი ხარ, ჩემი სამყარო ნათდება.</p>
+<p>შენ ხარ ჩემი გულის ყველაზე ლამაზი ნაწილი.</p>
+
+</div>
+
+<div class="section">
+<h2>🌹</h2>
+
+<p>
+შენი ხმა და თბილი სიტყვები ყველაზე მშვიდი მუსიკაა.<br>
+შენი ჩახუტება ჩემი ყველაზე უსაფრთხო ადგილია.
+</p>
+
+<p>
+კიდევ ერთხელ რომ დავიბადო,<br>
+მაინც შენ აგირჩევდი.<br><br>
+იმიტომ რომ შენ ხარ ჩემი სიყვარული ❤️
+</p>
+
+</div>
+
+<!-- 🌹 Roses -->
+
+<div class="rose" style="left:10%; animation-duration:8s;">🌹</div>
+<div class="rose" style="left:25%; animation-duration:10s;">🌹</div>
+<div class="rose" style="left:40%; animation-duration:12s;">🌹</div>
+<div class="rose" style="left:60%; animation-duration:9s;">🌹</div>
+<div class="rose" style="left:80%; animation-duration:11s;">🌹</div>
+
+<script>
+
+/* 💍 ring animation */
+
+function openRing(el){
+
+el.classList.toggle("open");
+
+for(let i=0;i<20;i++){
+createSparkle();
+}
+
+}
+
+/* ✨ sparkle effect */
+
+function createSparkle(){
+
+const s=document.createElement("div");
+
+s.innerHTML="✨";
+s.style.position="fixed";
+s.style.left=Math.random()*100+"%";
+s.style.top=Math.random()*100+"%";
+s.style.fontSize="20px";
+s.style.animation="float 3s forwards";
+
+document.body.appendChild(s);
+
+setTimeout(()=>s.remove(),3000);
+
+}
+
+/* ❤️ random hearts */
+
+function createHeart(){
+
+const heart=document.createElement("div");
+heart.className="heart";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(createHeart,600);
+
+/* 💖 click hearts */
+
+document.addEventListener("click",function(e){
+
+const heart=document.createElement("div");
+
+heart.innerHTML="💖";
+heart.style.position="fixed";
+heart.style.left=e.clientX+"px";
+heart.style.top=e.clientY+"px";
+heart.style.fontSize="24px";
+heart.style.pointerEvents="none";
+heart.style.animation="float 3s forwards";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),3000);
+
+});
+
+</script>
+
+</body>
+</html>
